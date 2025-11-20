@@ -28,6 +28,7 @@ process METHYLDACKEL_MBIAS {
         $fasta \\
         $bam \\
         $prefix \\
+        > ${prefix}.mbias.txt
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
