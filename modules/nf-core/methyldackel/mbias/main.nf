@@ -24,12 +24,10 @@ process METHYLDACKEL_MBIAS {
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
     MethylDackel mbias \\
-        $args \\
+        $args --txt \\
         $fasta \\
         $bam \\
         $prefix \\
-        --txt \\
-        > ${prefix}.mbias.txt
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
